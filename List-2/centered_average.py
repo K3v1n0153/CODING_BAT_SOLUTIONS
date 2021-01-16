@@ -23,6 +23,7 @@ centered_average([-10, -4, -2, -4, -2, 0]) → -3
 ## SOLUTION BY: KEVIN ##
 ########################
 
+# First Solution
 def centered_average(nums):
 
 	sum = 0
@@ -33,3 +34,14 @@ def centered_average(nums):
 		sum += num
 
 	return (sum - max_value - min_value)/(len(nums) - 2)
+
+# Or
+
+# Second Solution
+def centered_average(nums):
+
+	sum_num = sum(nums)
+	maxv = max(nums)
+	minv = min(nums)
+
+	return (sum_num - maxv - minv)/(len(nums)-2)
